@@ -1,5 +1,4 @@
 import React from 'react';
-import Pacientes from './Pacientes';
 
 const About =()=>{
     return(
