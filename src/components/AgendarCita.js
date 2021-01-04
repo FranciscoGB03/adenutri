@@ -1,58 +1,45 @@
-import React, { Component } from 'react';
-import {useState} from 'react';
+import React from 'react';
+import {useForm} from 'react-hook-form'; //sirve para validar los campos de un form
 import 'react-datepicker/dist/react-datepicker.css';
+import Campo from '../template/Campo';
+import SelectData from '../template/SelectData';
+import Fecha from '../template/Fecha';
+import {GiSave} from 'react-icons/gi';
 
-
-<h1>Agendar Cita</h1> 
-const AgendarCita =()=>{
-//----hooks----//
-const [AgendarCitas,setAgendarCitas]= useState({idPaciente:'',idDoctor:'',tipocita:''});    
-///----Metodos---//
-const handleInputChange = (event) =>{
-    setAgendarCitas({...AgendarCitas,[event.target.name]:event.target.value})
-  
-}
-const guardar = (event)=>{
-    event.preventDefault();
-    console.log(AgendarCitas);
-}
-
-
-///---Variable--/
-return(
-    
-     
-    <div>
-    <div><h2>Registro de cita</h2> </div>
-    <form method= "post" onSubmit={guardar}> 
-    <div className = "d-flex justify-content start">
-    <div>IdPaciente: </div>
-    <input name= "IdPaciente"
-    value={AgendarCitas.idPaciente}
-    onChange= {handleInputChange}/>
-</div>
-
-<div className = "d-flex justify-content start">
-    <div>IdDoctor: </div>
-    <input name= "IdDoctor"
-    value={AgendarCitas.idDoctor}
-    onChange= {handleInputChange}/>
- </div>
-
-<div className = "d-flex justify-content start">
-    <div>Tipo de Cita: </div>
-    <input name= "Tipo de Cita"
-    value={AgendarCita.tipocita}
-    onChange= {handleInputChange}/>
-     
-    </div>
-   
-
-<button className = "btn btn-outline-dark" type="submit">Enviar</button>
-</form>
-</div>
-
-)
-
+const AgendarCita=()=>{
+    //--------variables para validacion por medio de react-hook-form----//
+    const {register,errors,handleSubmit,watch,control}=useForm();
+    //----creacion de metodos o funciones------//
+    const onSubmit=(data,e)=>{
+        console.log(data);
+        e.target.reset();
+    }
+    //--------variables-------//
+    const pacientes=[
+        {valor:'1', etiqueta:'Jaime Vazquez'},
+        {valor:'2', etiqueta:'Esmeralda Rubi Valdes Reynoso'},
+        {valor:'3', etiqueta:'Monowoj Olivo Gaspar'}
+    ];
+    const doctores=[
+        {valor:'1', etiqueta:'Doctor1'},
+        {valor:'2', etiqueta:'Doctor2'},
+        {valor:'3', etiqueta:'Doctor3'}
+    ]
+    return(
+        <div className="">
+            <div className="">
+                <h1>Agendar Cita</h1>
+            </div>
+            <div>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <SelectData label="paciente" opciones={pacientes} etiqueta='Selecciona paciente:' register={register} watch={watch}/>
+                    <SelectData label="doctor" opciones={doctores} etiqueta='Selecciona doctor:' register={register} watch={watch}/>
+                    <Fecha nombre="fecha_cita" etiqueta="Seleccione Fecha:" control={control} defaultValue=""/>
+                    <Campo label="tipo" etiqueta="Tipo de cita:" register={register} errors={errors} required={true} tam={10}/>
+                    <button type="submit" className="btn btn-outline-info"><GiSave/>Guardar</button>
+                </form>
+            </div>
+        </div>
+    );
 }
 export default AgendarCita;

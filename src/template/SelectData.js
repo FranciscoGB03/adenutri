@@ -3,7 +3,7 @@ import React from 'react';
 const SelectData=({label,opciones,etiqueta,register,watch})=>{
     
     return(
-        <div className="d-flex justify-content-start">
+        <div className="d-flex justify-content-start mt-1">
             <div className="mt-1 mr-1 text-nowrap">{etiqueta}</div>
             <select name={label} ref={register} className="form-control form-control-sm">
                 {(watch(label)===undefined)&&
