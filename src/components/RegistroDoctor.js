@@ -37,7 +37,7 @@ const RegistroDoctor=()=>{
                 <Campo label="rfc" etiqueta="RFC:" register={register} tam='13' errors={errors} required={true}/>
                 <Campo label="cedula" etiqueta="Cedula profesional:" register={register} tam='7' errors={errors} required={true}/>
                 <Campo label="tel" etiqueta="Teléfono:" register={register} errors={errors} tam='10' required={true}/>
-                <Campo label="correo" etiqueta="E-mail:" register={register} errors={errors} tam='8' required={true}/>
+                <Campo label="correo" type='email' etiqueta="E-mail:" register={register} errors={errors} tam='8' required={true}/>
                 <Campo label="consultorio" etiqueta="Consultorio:" register={register} tam='1' errors={errors} required={true}/>
                 <Campo label="direccion" etiqueta="Dirección:" register={register} tam='2' errors={errors} required={true}/>
                 <div className="d-flex justify-content-around">                    

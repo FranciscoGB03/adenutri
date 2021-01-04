@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Campo=({ etiqueta,label, tam, register,errors, required=false,type="text" })=>{
+const Campo=({ etiqueta,label, tam=0, register, errors, required=false, type="text" })=>{
+    
     return(
         <>
             <div className="d-flex justify-content-start mt-1">
