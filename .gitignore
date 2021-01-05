@@ -25,3 +25,4 @@ yarn-error.log*
 #archivo de configuración
 ignorado.js
 .eslintcache
+.env.development

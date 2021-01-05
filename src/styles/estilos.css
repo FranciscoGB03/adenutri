@@ -2,3 +2,16 @@
     background-color: blueviolet;
     color: coral;
 }
+.carousel .control-dots{
+    margin:60px auto;
+}
+.carousel li.slide div{
+    height: 700px;
+}
+.carousel li.slide div img{
+    display: block;
+    margin: 0 auto;
+    /*max-width: 50%;*/
+    width: 100%;
+    height: auto;
+}

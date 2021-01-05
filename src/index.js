@@ -9,10 +9,12 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 /*Estilos propios de css*/
 import './styles/estilos.css';
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 ReactDOM.render(
-  <React.StrictMode>
+  /*<React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>*/<App/>,
   document.getElementById('root')
 );
 
