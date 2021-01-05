@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import 'react-datepicker/dist/react-datepicker.css'
 import Campo from '../template/Campo';
@@ -8,17 +8,24 @@ import Fecha from '../template/Fecha';
 import RadioButton from '../template/RadioButton';
 import SelectData from '../template/SelectData';
 import Template from '../template/Template';
+import {getRoles} from '../api/PacientesApi';
 
 
 const Pacientes = () => {
     //----------decalaracion de hooks---------//
     const { register, errors, handleSubmit, control, watch } = useForm();
+    const [roles,setRoles]=useState([]);
 
     //-----------funciones o metodos----//
     const onSubmit = (data, e) => {
         console.log(data);
         e.target.reset();
     };
+    //-----------------useEffect----------///
+    useEffect(()=>{getRoles().then(res=>{
+        console.log(res)
+        setRoles(res)
+    })},[]);
     //-----variable-----//
     const sexo = [
         { nombre: "sexo", valor: "H", etiqueta: "Hombre" },
@@ -56,6 +63,12 @@ const Pacientes = () => {
                             <button type="submit" className="btn btn-outline-info"><FaSave />Guardar</button>
                         </div>
                     </form>
+                </div>
+                <div>
+                    <h1>Roles que existen</h1>
+                    {(roles||[]).map((rol,idx)=>
+                        <div>{rol.nombre}</div>
+                    )}
                 </div>
             </div>
         </Template>
