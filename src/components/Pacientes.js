@@ -9,6 +9,7 @@ import RadioButton from '../template/RadioButton';
 import SelectData from '../template/SelectData';
 import Template from '../template/Template';
 import {getRoles} from '../api/PacientesApi';
+import FechaMes from '../template/FechaMes';
 
 
 const Pacientes = () => {
@@ -57,7 +58,9 @@ const Pacientes = () => {
                         <Campo label="ocupacion" etiqueta="Ocupación:" register={register} errors={errors} required={true} />
                         <Campo label="escolaridad" etiqueta="Escolaridad:" register={register} errors={errors} required={true} />
                         <Campo label="persona_responsable" etiqueta="Persona responsable:" register={register} errors={errors} required={true} />
-                        <Campo label="email" etiqueta="E-mail:" type="email" register={register} errors={errors} required={true} />
+                        <Campo label="email" etiqueta="E-mail:" type="email" register={register} errors={errors} required={true} />                        
+                        <Campo label="prueba" etiqueta="fecha:" type="date" register={register} errors={errors} required={true} />
+                        <FechaMes nombre="fecha_prueba" etiqueta="Fecha de nacimiento" control={control}/>
                         <div className="d-flex justify-content-around mt-2">
                             <button type="reset" className="btn btn-outline-danger"><TiCancelOutline />Cancelar</button>
                             <button type="submit" className="btn btn-outline-info"><FaSave />Guardar</button>
@@ -67,7 +70,7 @@ const Pacientes = () => {
                 <div>
                     <h1>Roles que existen</h1>
                     {(roles||[]).map((rol,idx)=>
-                        <div>{rol.nombre}</div>
+                        <div key={idx}>{rol.nombre}</div>
                     )}
                 </div>
             </div>
