@@ -46,19 +46,19 @@ const Pacientes = () => {
                     <div className="d-flex justify-content-center mr-5">
                         <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
                             <h1 className="">Registro de paciente</h1>
-                            <Campo label="nombre" etiqueta="Nombre:" register={register} errors={errors} required={true} />
-                            <Campo label="ape_pat" etiqueta="Apellido Paterno:" register={register} errors={errors} required={true} />
-                            <Campo label="ape_mat" etiqueta="Apellido Materno:" register={register} errors={errors} required={true} />
-                            <Campo label="direccion" etiqueta="Dirección:" register={register} errors={errors} required={true} />
-                            <Campo label="tel" etiqueta="Teléfono:" register={register} errors={errors} required={true} />
-                            <Campo label="edad" etiqueta="Edad:" type="number" register={register} errors={errors} required={true} />       
+                            <Campo data="nombre" etiqueta="Nombre:" register={register} errors={errors} required={true} />
+                            <Campo data="ape_pat" etiqueta="Apellido Paterno:" register={register} errors={errors} required={true} />
+                            <Campo data="ape_mat" etiqueta="Apellido Materno:" register={register} errors={errors} required={true} />
+                            <Campo data="direccion" etiqueta="Dirección:" register={register} errors={errors} required={true} />
+                            <Campo data="tel" etiqueta="Teléfono:" register={register} errors={errors} required={true} />
+                            <Campo data="edad" etiqueta="Edad:" type="number" register={register} errors={errors} required={true} />       
                             <FechaMes nombre="fecha_nac" etiqueta="Fecha de nacimiento:" control={control}/>                     
                             <RadioButton etiqueta="Sexo:" opciones={sexo} register={register} />
                             <SelectData etiqueta="Estado Civil:" label='estado_civil' opciones={civil} register={register} watch={watch} />
-                            <Campo label="ocupacion" etiqueta="Ocupación:" register={register} errors={errors} required={true} />
-                            <Campo label="escolaridad" etiqueta="Escolaridad:" register={register} errors={errors} required={true} />
-                            <Campo label="persona_responsable" etiqueta="Persona responsable:" register={register} errors={errors} required={true} />
-                            <Campo label="email" etiqueta="E-mail:" type="email" register={register} errors={errors} required={true} />
+                            <Campo data="ocupacion" etiqueta="Ocupación:" register={register} errors={errors} required={true} />
+                            <Campo data="escolaridad" etiqueta="Escolaridad:" register={register} errors={errors} required={true} />
+                            <Campo data="persona_responsable" etiqueta="Persona responsable:" register={register} errors={errors} required={true} />
+                            <Campo data="email" etiqueta="E-mail:" type="email" register={register} errors={errors} required={true} />
                             {/*<Campo label="prueba" etiqueta="fecha:" type="date" register={register} errors={errors} required={true} />*/}                            
                             <div className="d-flex justify-content-around mt-2">
                                 <button type="reset" className="btn btn-outline-danger"><TiCancelOutline />Cancelar</button>
