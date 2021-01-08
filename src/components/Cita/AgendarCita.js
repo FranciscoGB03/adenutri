@@ -9,7 +9,7 @@ import Template from '../../template/Template';
 
 const AgendarCita = () => {
     //--------variables para validacion por medio de react-hook-form----//
-    const { register, errors, handleSubmit, watch, control } = useForm();
+    const { register, errors, handleSubmit, control } = useForm();
     //----creacion de metodos o funciones------//
     const onSubmit = (data, e) => {
         console.log(data);
@@ -34,8 +34,8 @@ const AgendarCita = () => {
                 </div>
                 <div>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <SelectData data="paciente" opciones={pacientes} etiqueta='Selecciona paciente:' register={register} watch={watch} />
-                        <SelectData data="doctor" opciones={doctores} etiqueta='Selecciona doctor:' register={register} watch={watch} />
+                        <SelectData data="paciente" opciones={pacientes} etiqueta='Selecciona paciente:' register={register} />
+                        <SelectData data="doctor" opciones={doctores} etiqueta='Selecciona doctor:' register={register} />
                         <Fecha nombre="fecha_cita" etiqueta="Seleccione Fecha:" control={control} defaultValue="" />
                         <Campo data="tipo" etiqueta="Tipo de cita:" register={register} errors={errors} required={true} tamMax={10} />
                         <button type="submit" className="btn btn-outline-info"><GiSave />Guardar</button>
