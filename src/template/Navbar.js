@@ -4,7 +4,7 @@ import Logo from '../img/Adenutri_logo_trans.png';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+        <nav className="navbar navbar-expand-sm bg-dark navbar-dark mb-5 fixed-top">
             {/*Logo*/}
             <Link className="navbar-brand" to="/">
                 <img src={Logo} alt="logo" className="w-50 h-25" />
@@ -24,9 +24,15 @@ const Navbar = () => {
                             <Link className="dropdown-item" to="/altaPaciente">Consultar Pacientes</Link>                            
                         </div>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="#">Link 2</Link>
-                    </li>
+                    <li className="nav-item dropdown">
+                        <Link className="nav-link dropdown-toggle" to="#" id="navbardrop" data-toggle="dropdown">
+                            Citas
+                        </Link>
+                        <div className="dropdown-menu">
+                            <Link className="dropdown-item" to="/cita">Cita</Link>
+                            <Link className="dropdown-item" to="/agendarCita">Agendar cita</Link>                            
+                        </div>
+                    </li>                    
                     <li className="nav-item">
                         <Link className="nav-link" to="#">Link 3</Link>
                     </li>

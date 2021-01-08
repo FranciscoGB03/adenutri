@@ -1,12 +1,12 @@
 import React from 'react';
 
-const SelectData=({label,opciones,etiqueta,register,watch})=>{
+const SelectData=({data,opciones,etiqueta,register,watch})=>{
     
     return(
         <div className="d-flex justify-content-start mt-1">
             <div className="mt-1 mr-1 text-nowrap">{etiqueta}</div>
-            <select name={label} ref={register} className="form-control form-control-sm">
-                {(watch(label)===undefined)&&
+            <select name={data} ref={register} className="form-control form-control-sm">
+                {(watch(data)===undefined)&&
                     <option value={-1}>Selecciona ...</option>
                 }
                 {opciones.map((opcion,idx)=>

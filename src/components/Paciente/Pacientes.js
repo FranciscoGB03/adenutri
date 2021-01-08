@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import 'react-datepicker/dist/react-datepicker.css'
-import Campo from '../template/Campo';
+import Campo from '../../template/Campo';
 import { FaSave } from 'react-icons/fa';
 import { TiCancelOutline } from 'react-icons/ti';
-import RadioButton from '../template/RadioButton';
-import SelectData from '../template/SelectData';
-import Template from '../template/Template';
-import { getRoles } from '../api/PacientesApi';
-import FechaMes from '../template/FechaMes';
+import RadioButton from '../../template/RadioButton';
+import SelectData from '../../template/SelectData';
+import Template from '../../template/Template';
+import { getRoles } from '../../api/PacientesApi';
+import FechaMes from '../../template/FechaMes';
 
 
 const Pacientes = () => {
@@ -30,8 +30,8 @@ const Pacientes = () => {
     }, []);
     //-----variable-----//
     const sexo = [
-        { nombre: "sexo", valor: "H", etiqueta: "Hombre" },
-        { nombre: "sexo", valor: "M", etiqueta: "Mujer" }
+        { valor: "M", etiqueta: "Mujer" },
+        { valor: "H", etiqueta: "Hombre" }
     ];
     const civil = [
         { valor: 'casado', etiqueta: 'Casado' },
@@ -53,8 +53,8 @@ const Pacientes = () => {
                             <Campo data="tel" etiqueta="Teléfono:" register={register} errors={errors} required={true} />
                             <Campo data="edad" etiqueta="Edad:" type="number" register={register} errors={errors} required={true} />       
                             <FechaMes nombre="fecha_nac" etiqueta="Fecha de nacimiento:" control={control}/>                     
-                            <RadioButton etiqueta="Sexo:" opciones={sexo} register={register} />
-                            <SelectData etiqueta="Estado Civil:" label='estado_civil' opciones={civil} register={register} watch={watch} />
+                            <RadioButton data="sexo" etiqueta="Sexo:" required={true} opciones={sexo} register={register} errors={errors} />
+                            <SelectData etiqueta="Estado Civil:" data='estado_civil' opciones={civil} register={register} watch={watch} />
                             <Campo data="ocupacion" etiqueta="Ocupación:" register={register} errors={errors} required={true} />
                             <Campo data="escolaridad" etiqueta="Escolaridad:" register={register} errors={errors} required={true} />
                             <Campo data="persona_responsable" etiqueta="Persona responsable:" register={register} errors={errors} required={true} />

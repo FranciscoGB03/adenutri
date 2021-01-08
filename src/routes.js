@@ -1,11 +1,11 @@
-import AgendarCita from './components/AgendarCita';
+import AgendarCita from './components/Cita/AgendarCita';
 import About from './components/About';
 import Home from './components/Home';
 import NoFound from './components/NotFound';
-import DatosAntroMedicion from './components/DatosAntroMedicion';
-import RegistroDoctor from './components/RegistroDoctor';
-import Pacientes from './components/Pacientes';
-import Doctor from './components/Doctor';
+import DatosAntroMedicion from './components/Cita/DatosAntroMedicion';
+import RegistroDoctor from './components/Admin/RegistroDoctor';
+import Pacientes from './components/Paciente/Pacientes';
+import Doctor from './components/Admin/Doctor';
 
 const ROUTES=[
     { exact:true, path:'/', component:Home },
