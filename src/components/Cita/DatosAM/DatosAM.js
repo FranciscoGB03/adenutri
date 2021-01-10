@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FaSave } from 'react-icons/fa';
 import { TiCancelOutline } from 'react-icons/ti';
-
 const DatosAM = () => {//------hooks--->
     const [DatosAM, setDatosAM] = useState({ peso: '',
      pesoi: '',
@@ -22,6 +21,7 @@ const DatosAM = () => {//------hooks--->
         event.preventDefault();
         console.log(DatosAM);
     }
+   // const  {register,errors} = useForm();
     return (
         <div>
                     <h1 className="m-4">Datos Antropométricos (Medición)</h1>
@@ -68,6 +68,7 @@ const DatosAM = () => {//------hooks--->
                                     <label htmlFor="peso" className="mr-sm-4">Pliegue Cutáneo Suprailiaco:</label>
                                 <input type="number" id="pliegecs" name="pliegecs" value={DatosAM.pliegecs} onChange={handleInputChange} className="form-control mb-2 mr-sm-5" placeholder="50.0" step="0.001" />
                             </div>
+                            
                             <div className="col-md-4">
                                 <button type="reset" className="btn mt-4  p-2 btn-outline-danger"><TiCancelOutline/>Cancelar</button>
                                 <button type="submit" className="btn ml-5 btn-outline-info mt-4 p-2"><FaSave/>Guardar</button>
