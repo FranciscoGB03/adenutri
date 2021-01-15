@@ -34,7 +34,7 @@ const DatosAM = () => {//------hooks--->
                             data='pesoi'
                             value={DatosAM.pesoi}
                             onChange={handleInputChange}
-                            type='date'
+                            type='number'
                             placeholder="50.0"
                             step='0.001' />
                         <Campo etiqueta="Estatura:"
