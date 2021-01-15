@@ -1,7 +1,7 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
 import 'react-datepicker/dist/react-datepicker.css'
-import Campo from '../../template/Campo';
+import Campo from '../../template/CampoHook';
 import {FaSave} from 'react-icons/fa';
 import {TiCancelOutline} from 'react-icons/ti';
 import Fecha from '../../template/Fecha';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form'; //sirve para validar los campos de un form
 import 'react-datepicker/dist/react-datepicker.css';
-import Campo from '../../template/Campo';
+import Campo from '../../template/CampoHook';
 import SelectData from '../../template/SelectData';
 import Fecha from '../../template/Fecha';
 import { GiSave } from 'react-icons/gi';

@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 /*Estilos propios de css*/
 import './styles/estilos.css';
-
+import './styles/textEditor.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 ReactDOM.render(
