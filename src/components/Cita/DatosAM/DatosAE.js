@@ -21,7 +21,6 @@ const DatosAE = () => {
     masa:'' });
     const handleInputChange = (event) => {
         setDatosAE({ ...DatosAE, [event.target.name]: event.target.value })
-
     }
     const guardar = (event) => {
         event.preventDefault();

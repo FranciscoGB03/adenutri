@@ -7,8 +7,8 @@ import produce from 'immer';
 
 const Cita = () => {
     const [plantilla, setPlantilla] = useState({
-        datosAM: [], recomendaciones: [
-            { etiqueta: 'Verduras', preferir: 'hola', evitar: '' },
+        datosAM: [], datosAE:[],recomendaciones: [
+            { etiqueta: 'Verduras', preferir: '', evitar: '' },
             { etiqueta: 'Frutas', preferir: '', evitar: '' },
             { etiqueta: 'cereales', preferir: '', evitar: '' },
             { etiqueta: 'leguminosas', preferir: '', evitar: '' },
@@ -23,7 +23,7 @@ const Cita = () => {
         ]
     });
 
-    const actualizaPlantilla = ({ propiedad, valor }) => {
+    const actualizaPlantilla = (propiedad, valor) => {
         setPlantilla(produce(plantilla, draft => {
             draft[propiedad] = valor;
         }))

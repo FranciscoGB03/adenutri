@@ -18,7 +18,6 @@ const DatosAM = () => {//------hooks--->
     });
     const handleInputChange = (event) => {
         setDatosAM({ ...DatosAM, [event.target.name]: event.target.value })
-
     }
     const guardar = (event) => {
         event.preventDefault();
@@ -35,7 +34,7 @@ const DatosAM = () => {//------hooks--->
                             data='pesoi'
                             value={DatosAM.pesoi}
                             onChange={handleInputChange}
-                            type='number'
+                            type='date'
                             placeholder="50.0"
                             step='0.001' />
                         <Campo etiqueta="Estatura:"
