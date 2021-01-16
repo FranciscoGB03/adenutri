@@ -10,8 +10,11 @@ import Template from '../../template/Template';
 import { getRoles } from '../../api/PacientesApi';
 import FechaMes from '../../template/FechaMes';
 import EditorW from '../../template/Editor';
+import {useTranslation} from 'react-i18next';
 
 const Pacientes = () => {
+    //-----------hook para lenguaje----------//
+    const [t]=useTranslation('general')
     //----------decalaracion de hooks---------//
     const { register, errors, handleSubmit, control, watch } = useForm(
         { mode: "onChange" }
@@ -50,7 +53,7 @@ const Pacientes = () => {
                     <div className="d-flex justify-content-center mr-5">
                         <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
                             <h1 className="">Registro de paciente</h1>
-                            <Campo data="nombre" etiqueta="Nombre:" register={register} errors={errors} required={true} />
+                            <Campo data="nombre" etiqueta={`${t('nombre')}:`} register={register} errors={errors} required={true} />
                             <Campo data="ape_pat" etiqueta="Apellido Paterno:" register={register} errors={errors} required={true} />
                             <Campo data="ape_mat" etiqueta="Apellido Materno:" register={register} errors={errors} required={true} />
                             <Campo data="direccion" etiqueta="Dirección:" register={register} errors={errors} required={true} />
