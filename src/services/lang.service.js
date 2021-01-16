@@ -1,15 +1,6 @@
-let langs = {};
-
-export const getLocale=()=>{
-    let locale=navigator.language||navigator.userLanguage;
-    return locale.substring(0,2);
-}
-
-export const creacionGlobal=()=>{        
-    import(`../lang/${getLocale()}/index`).then((traducciones) => {
-        console.log(traducciones['cita'])
-        langs=traducciones['cita']
-        console.log(langs)    
-        return langs;      
-    });
+export const getLocale = () => {
+    let locale = localStorage.getItem("localeStorage") == null ?
+        localStorage.setItem("localeStorage", navigator.language || navigator.userLanguage) :
+        localStorage.getItem("localeStorage");
+    return locale.substring(0, 2);
 }
