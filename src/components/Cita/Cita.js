@@ -4,8 +4,10 @@ import DatosAE from './DatosAM/DatosAE';
 import DatosAM from './DatosAM/DatosAM';
 import Recomendaciones from './DatosAM/Recomendaciones';
 import produce from 'immer';
+import {useTranslation} from 'react-i18next';
 
 const Cita = () => {
+    const [t]=useTranslation('cita')
     const [plantilla, setPlantilla] = useState({
         datosAM: [], datosAE:[],recomendaciones: [
             { etiqueta: 'Verduras', preferir: '', evitar: '' },
@@ -28,20 +30,19 @@ const Cita = () => {
             draft[propiedad] = valor;
         }))
     }
-
     return (
         <Template>
             <div className="mt-3">
                 <div className="container mt-3">
                     <ul className="nav nav-tabs">
                         <li className="nav-item">
-                            <a className="nav-link active" data-toggle="tab" href="#home">Medici&oacute;n</a>
+                            <a className="nav-link active" data-toggle="tab" href="#home">{t('medicion')}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" data-toggle="tab" href="#menu1">Evaluacion</a>
+                            <a className="nav-link" data-toggle="tab" href="#menu1">{t('evaluacion')}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" data-toggle="tab" href="#menu2">Recomendaciones</a>
+                            <a className="nav-link" data-toggle="tab" href="#menu2">{t('recomendaciones')}</a>
                         </li>
                     </ul>
                 </div>

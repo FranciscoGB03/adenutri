@@ -1,7 +1,5 @@
 const general={    
-    "cancelar":"Cancel",   
-    "edad":"Age",
-    "guadar":"Save",
-    "nombre":"Name"
+    "cancelar":"Cancel",      
+    "guadar":"Save"
 }
 export default general;

@@ -1,0 +1,11 @@
+{
+    "pacientes":"Pacient",
+    "citas":"Dates",
+    "cita":"Date",
+    "agendarCita":"Create Date",
+    "agregarPaciente":"Add Pacient",
+    "consultarPaciente":"Pacient",
+    "idioma":"Language",
+    "es":"Español",
+    "en":"English"
+}

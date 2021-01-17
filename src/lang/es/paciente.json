@@ -1,0 +1,15 @@
+{
+    "nombre":"Nombre",
+    "apPat":"Apellido Paterno",
+    "apMat":"Apellido Materno",
+    "direccion":"Dirección",
+    "tel":"Teléfono",
+    "edad":"Edad",
+    "fechaNac":"Fecha Nacimiento",
+    "sexo":"Sexo",
+    "estadoCivil":"Estado Civil",
+    "ocupacion":"Ocupación",
+    "escolaridad":"Escolaridad",
+    "personaRes":"Persona Responsable",
+    "email":"E-mail"
+}

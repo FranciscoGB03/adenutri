@@ -14,7 +14,7 @@ import {useTranslation} from 'react-i18next';
 
 const Pacientes = () => {
     //-----------hook para lenguaje----------//
-    const [t]=useTranslation('general')
+    const [t]=useTranslation('paciente')
     //----------decalaracion de hooks---------//
     const { register, errors, handleSubmit, control, watch } = useForm(
         { mode: "onChange" }

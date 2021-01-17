@@ -1,0 +1,15 @@
+{
+    "nombre":"Name",
+    "apPat":"Last Name",
+    "apMat":"Second Surname",
+    "direccion":"Location",
+    "tel":"Phone",
+    "edad":"Age",
+    "fechaNac":"Birthdate",
+    "sexo":"Sex",
+    "estadoCivil":"Marital Status",
+    "ocupacion":"Ocupation",
+    "escolaridad":"Education level",
+    "personaRes":"Tutor",
+    "email":"E-mail"
+}

@@ -1,5 +1,8 @@
 const cita={
     "pliegue":'Pliegue',
-    "peso":'Peso'
+    "peso":'Peso',
+    "medicion":"Medición",
+    "evaluacion":"Evaluación",
+    "recomendaciones":"Recomendaciones"
 }
 export default cita;

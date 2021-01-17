@@ -1,5 +1,8 @@
 {
     "pliegue":"Pleat",
-    "peso":"weight"
+    "peso":"weight",
+    "medicion":"Measurement",
+    "evaluacion":"Evaluation",
+    "recomendaciones":"Advices"
 }
     

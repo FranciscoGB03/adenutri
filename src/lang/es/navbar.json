@@ -1,0 +1,11 @@
+{
+    "pacientes":"Pacientes",
+    "citas":"Citas",
+    "cita":"Cita",
+    "agendarCita":"Agendar Cita",
+    "agregarPaciente":"Agregar Paciente",
+    "consultarPaciente":"Consultar Paciente",
+    "idioma":"Idioma",
+    "es":"Español",
+    "en":"English"
+}
