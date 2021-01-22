@@ -7,7 +7,7 @@ import imagen3 from '../img/imagen3.jpg';
 
 const Home = () => {
     return (
-        <Template>
+        <Template  titulo="Home" descripcion="Página de inicio de la aplicacion">
             <Carousel showArrows={true} showThumbs={true} autoPlay={true}>
                     <div className="" onClick={()=>{alert("hola xolos")}}>
                         <img src={imagen1} alt="Imagen1"/>

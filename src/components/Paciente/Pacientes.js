@@ -11,10 +11,14 @@ import { getRoles } from '../../api/PacientesApi';
 import FechaMes from '../../template/FechaMes';
 import EditorW from '../../template/Editor';
 import {useTranslation} from 'react-i18next';
+import {UIStore} from '../../store/UIStore';
 
 const Pacientes = () => {
     //-----------hook para lenguaje----------//
     const [t]=useTranslation('paciente')
+    //------Variable global------//
+    const prueba=UIStore.useState(s=>s.prueba);
+    console.log(prueba)
     //----------decalaracion de hooks---------//
     const { register, errors, handleSubmit, control, watch } = useForm(
         { mode: "onChange" }

@@ -1,4 +1,4 @@
-export const getLocale = () => {
+export const getLocale = () => {    
     let locale = localStorage.getItem("localeStorage") == null ?
         localStorage.setItem("localeStorage", navigator.language || navigator.userLanguage) :
         localStorage.getItem("localeStorage");

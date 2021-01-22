@@ -6,15 +6,13 @@ import reportWebVitals from './reportWebVitals';
 /*Estilos de bootstrap*/
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'popper.js';
 /*Estilos propios de css*/
 import './styles/estilos.css';
 import './styles/textEditor.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {I18nextProvider} from 'react-i18next'
-import i18next from './i18n'
-
-
-
+import {I18nextProvider} from 'react-i18next';
+import i18next from './i18n';
 
 ReactDOM.render(
   /*<React.StrictMode>

@@ -31,7 +31,7 @@ const Cita = () => {
         }))
     }
     return (
-        <Template>
+        <Template titulo="Cita" descripcion="Página para atender citas médicas">
             <div className="mt-3">
                 <div className="container mt-3">
                     <ul className="nav nav-tabs">
