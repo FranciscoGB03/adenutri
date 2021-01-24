@@ -34,12 +34,13 @@ const IMC = ({ imc, actualiza }) => {
         <div>
             <form className="d-flex justify-content-start">
                 <div className="mr-5">
-                    <Campo containerClass="text-nowrap d-flex justify-content-start mt-2"
-                        labelClass="mr-2 mt-2"
-                        data="unidad"
-                        etiqueta="sistema de unidades:"
-                        type="text"
-                        onChange={(e) => actualizaImc(e)} />
+                    <div className="d-flex justify-content-start">
+                    <label htmlFor="unidad" className="text-nowrap mt-5 mr-2">Sistema de unidades:</label>
+                    <select className="form-control mt-5" name="unidad" defaultValue="" onChange={actualizaImc}>
+                        <option value="metrico">Métrico decimal(kilogramos-metros)</option>
+                        <option value="ingles">Inglés(libras-pulgadas)</option>
+                    </select>                   
+                    </div>
                     <Campo containerClass="text-nowrap d-flex justify-content-start mt-2"
                         labelClass="mr-2 mt-2"
                         data="peso"
@@ -54,9 +55,9 @@ const IMC = ({ imc, actualiza }) => {
                         onChange={(e) => actualizaImc(e)} />
                 </div>
                 <div>
-                    <p><span className="mr-2">imc:</span><NumberFormat value={imc.imc} displayType="text" fixedDecimalScale={true} decimalScale={2}/></p>
-                    <p><span className="mr-2">peso minimo:</span><NumberFormat value={imc.peso_min} displayType="text" fixedDecimalScale={true} decimalScale={2}/></p>
-                    <p><span className="mr-2">peso maximo:</span><NumberFormat value={imc.peso_max} displayType="text" fixedDecimalScale={true} decimalScale={2}/></p>
+                    <p><span className="mr-2">imc:</span><NumberFormat value={imc.imc} displayType="text" fixedDecimalScale={true} decimalScale={2} /></p>
+                    <p><span className="mr-2">peso minimo:</span><NumberFormat value={imc.peso_min} displayType="text" fixedDecimalScale={true} decimalScale={2} /></p>
+                    <p><span className="mr-2">peso maximo:</span><NumberFormat value={imc.peso_max} displayType="text" fixedDecimalScale={true} decimalScale={2} /></p>
                 </div>
 
             </form>
