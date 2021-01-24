@@ -3,8 +3,7 @@ import Navbar from './Navbar';
 import Helmet from 'react-helmet';
 import { getLocale } from '../services/lang.service';
 
-const Template = (props) => {
-    console.log(process.env.REACT_APP_APP_NAME);
+const Template = (props) => {    
     return (
         <div className="">
             <Helmet>
