@@ -5,7 +5,7 @@ import NumberFormat from 'react-number-format';
 
 const IMC = ({ imc, actualiza }) => {
 
-    const sistemas = [{ valor: 'decimal', etiqueta: 'Métrico decimal(kilogramos-metros)' }, { valor: 'ingles', etiqueta: 'Inglés(libras-pulgadas)' }];
+    //const sistemas = [{ valor: 'decimal', etiqueta: 'Métrico decimal(kilogramos-metros)' }, { valor: 'ingles', etiqueta: 'Inglés(libras-pulgadas)' }];
 
     const actualizaImc = (e) => {
         actualiza('imc', produce(imc, draft => {
@@ -44,7 +44,7 @@ const IMC = ({ imc, actualiza }) => {
                     <Campo containerClass="text-nowrap d-flex justify-content-start mt-2"
                         labelClass="mr-2 mt-2"
                         data="peso"
-                        etiqueta="Peso actual:"
+                        etiqueta={"Peso actual:"}
                         type="number"
                         onChange={(e) => actualizaImc(e)} />
                     <Campo containerClass="text-nowrap d-flex justify-content-start mt-2"
