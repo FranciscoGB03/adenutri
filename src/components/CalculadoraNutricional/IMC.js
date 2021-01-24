@@ -33,10 +33,10 @@ const IMC = ({ imc, actualiza }) => {
     return (
         <div>
             <form className="d-flex justify-content-start">
-                <div className="mr-5">
+                <div className="mr-5 mt-5">
                     <div className="d-flex justify-content-start">
-                    <label htmlFor="unidad" className="text-nowrap mt-5 mr-2">Sistema de unidades:</label>
-                    <select className="form-control mt-5" name="unidad" defaultValue="" onChange={actualizaImc}>
+                    <label htmlFor="unidad" className="text-nowrap mr-2">Sistema de unidades:</label>
+                    <select className="form-control" name="unidad" defaultValue="" onChange={actualizaImc}>
                         <option value="metrico">Métrico decimal(kilogramos-metros)</option>
                         <option value="ingles">Inglés(libras-pulgadas)</option>
                     </select>                   
@@ -54,7 +54,7 @@ const IMC = ({ imc, actualiza }) => {
                         type="number"
                         onChange={(e) => actualizaImc(e)} />
                 </div>
-                <div>
+                <div className="mt-5">
                     <p><span className="mr-2">imc:</span><NumberFormat value={imc.imc} displayType="text" fixedDecimalScale={true} decimalScale={2} /></p>
                     <p><span className="mr-2">peso minimo:</span><NumberFormat value={imc.peso_min} displayType="text" fixedDecimalScale={true} decimalScale={2} /></p>
                     <p><span className="mr-2">peso maximo:</span><NumberFormat value={imc.peso_max} displayType="text" fixedDecimalScale={true} decimalScale={2} /></p>
